@@ -9,7 +9,15 @@
 </head>
 
 <body>
-    hello world
+    <p id="age"></p>
+    <script>
+        let ageEl = document.getElementById("age");
+        setInterval(() => {
+            let time = dayjs().diff(dayjs('2008-04-22'), 'year', true);
+            ageEl.innerText = time.toString().substring(0, 13);
+        }, 25);
+
+    </script>
 </body>
 
 </html>
